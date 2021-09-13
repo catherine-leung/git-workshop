@@ -29,7 +29,7 @@ Once you have a repo in github, there are a number of things that come with the 
 
 ## Commiting a new file
 * Make sure you are in the code tab
-* Hit the Create new file button
+* Hit the "Add file" drop down and choose "Create new file"
 * give the file a name (suggestion: alphabet.txt)
 * Edit the file by adding the following to it:
 ```
