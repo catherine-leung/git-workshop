@@ -11,7 +11,7 @@ In this first activity we will learn some basic git terminology by creating repo
 * log into github
 * click + sign at top right and select new repo
 * choose a name for this repo  (suggestion: gitwsrepo1)
-* this repo can be public
+* if your account is a free account, you must make this repo public as some of the features listed below are not available in private repos to free accounts
   * check the the "Initialize with a README" checkbox
   * hit create button
 
