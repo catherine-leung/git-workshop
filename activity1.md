@@ -48,7 +48,17 @@ This file is now known to git.  git is storing a version of this file
 ```
 LMNOP
 ```
+* delete the line HIJK
 * then click commit changes button
+
+## Modify the file again
+* click link for the alphabet.txt file
+* hit the pencil icon in the top right
+* insert the following before "LMNOP"
+```
+HIJK
+```
+* click commit changes button
 
 ## Lets look at the history
 * click on the file in code tab
