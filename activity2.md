@@ -99,13 +99,46 @@ no changes added to commit (use "git add" and/or "git commit -a")
 * Use the add and commit commands to commit this change
 ```
 git add alphabet.txt
-git commit -m "added LMNOP"
+git commit -m "added LMNOP, removed HIJK"
 ```
 * Again if you use ```git status``` you will see:
 ```
 On branch master
 nothing to commit, working tree clean
 ```
+
+## Modify the file again
+* edit your file by
+* insert the following before "LMNOP"
+```
+HIJK
+```
+* save the file
+* type the command:
+```git status```
+you will see
+```
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   alphabet.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+* This indicates that the version of alphabet.txt that git knows about is not the same as the one in your folder
+* Use the add and commit commands to commit this change
+```
+git add alphabet.txt
+git commit -m "added HIJK"
+```
+* Again if you use ```git status``` you will see:
+```
+On branch master
+nothing to commit, working tree clean
+```
+
 ## Lets look at the history
 * Use the command:
 ```git log```
