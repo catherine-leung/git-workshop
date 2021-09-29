@@ -63,7 +63,7 @@ LMNOP
 ## Branches
 * A key idea that makes git unique is the ease with which you can make and merge branches
 * A branch is made when you want to add something but you aren't totally sure if you want to keep it
-* By default when you create a repo in git, you create a branch named main
+* By default when you create a repo in github, you create a branch named main
   * You do not have to keep this branch name...there isn't anything special about it
 * notice at the top left there is a dropdown with the word ```main``` in it.  This is the branch you are looking at.
 * more accurately it is the most recent commit within that particular branch
