@@ -53,11 +53,11 @@ This file is now known to git.  git is storing a version of this file
 ## Modify the file
 * click link for the file you created in the last step 
 * hit the pencil icon in top right to edit the file
-* insert the following line after "HIJK"
+  1. insert the following line after "HIJK"
 ```
 LMNOP
 ```
-* delete the line HIJK
+  2. delete the line HIJK
 * then click commit changes button
 
 ## Modify the file again
