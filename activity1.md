@@ -23,6 +23,7 @@ Once you have a repo in github, there are a number of things that come with the 
 * pull requests
 * project
 * wiki
+* security
 * insights
 
 (these have changed over time and may change again in future).  A repo in other words can help you organize a project, provide space for feedback, documentation, and some basic analytics.  For this first activity we will mostly just be using  the code tab
