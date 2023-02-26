@@ -15,7 +15,10 @@ In this first activity we will learn some basic git terminology by creating repo
 * choose a name for this repo  (suggestion: gitwsrepo1)
 * if your account is a free account, you must make this repo public as some of the features listed below are not available in private repos to free accounts
   * check the the "Initialize with a README" checkbox
-  * hit create button
+
+  ![reposettings](https://user-images.githubusercontent.com/1699186/221422541-be37a907-cda6-427e-986f-89089fe71147.png)
+
+  * use default settings for other options, hit create button
 
 ## What you get with each repo
 
@@ -28,11 +31,14 @@ Once you have a repo in github, there are a number of things that come with the 
 * security
 * insights
 
-(these have changed over time and may change again in future).  A repo in other words can help you organize a project, provide space for feedback, documentation, and some basic analytics.  For this first activity we will mostly just be using  the code tab
+(these have changed over time and may change again in future).  A repo in other words can help you organize a project, provide space for feedback, documentation, and some basic analytics.  For this first activity we will mostly just be using  the **code** tab
 
 ## Commiting a new file
 * Make sure you are in the **code** tab
 * Hit the "Add file" drop down and choose "Create new file"
+ 
+  ![newfile](https://user-images.githubusercontent.com/1699186/221423775-c2c3d758-ba0d-4aea-b4f6-abb8ebb772da.png)
+
 * give the file a name (suggestion: alphabet.txt)
 * Edit the file by adding the following to it:
 ```
