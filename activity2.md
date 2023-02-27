@@ -157,7 +157,10 @@ On branch alpha1
 nothing to commit, working tree clean
 ```
 * To switch back to main you would use ```git checkout main```
-* Switch into your alpha1 branch
+
+## adding something to your alpha1 branch
+
+* Switch into your alpha1 branch ```git checkout alpha1```
 * Modify your file by adding:
 ```Now I know my ABC's``` to the bottom of the file
 * Commit this file to your alpha1 branch
@@ -181,9 +184,13 @@ nothing to commit, working tree clean
 
 ## Branching, merging, and conflicts
 * Be in the main branch: ```git checkout main```
+
+### Create a third branch
 * Create a third branch (suggest: alpha2): ```git branch alpha2```
 * We should now have 3 branches (main, alpha1 and alpha2).  You can see if this is the case by using:
 ```git branch -v```
+
+### first commit goes to main branch
 * Go into main branch ``` git checkout main```
   * In the alphabet.txt add the following(after the line ```QRS```:
 ```
@@ -195,8 +202,9 @@ TUV
 git add alphabet.txt
 git commit -m "added TUV"
 ```
+### second commit goes to alpha1 branch
 
-* Go into alpha1 version
+* Go into alpha1 branch
 * Add to the end of alphabet.txt the following line:
 ```
 Next time won't you sing with me
@@ -205,7 +213,9 @@ to the last line
   * save file
   * commit and add
 
-* Go into alpha2 version
+### third commit goes to alpha2 branch
+
+* Go into alpha2 branch
 * In the alphabet.txt add the following(after the line ```QRS```:
 ```
 WXY and Z
@@ -217,6 +227,7 @@ to the last line
 * Look at the network graph at this point:
 ```git log --graph --all --decorate --topo-order --oneline```
 
+### Merging it all together:
 
 Now, if you will recall, on github we were able to easily merge alpha1 to main but not alpha2.  The same thing will happen here.
 * Lets start by merging alpha1 into main:
