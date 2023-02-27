@@ -16,7 +16,7 @@ In this first activity we will learn some basic git terminology by creating repo
 * if your account is a free account, you must make this repo public as some of the features listed below are not available in private repos to free accounts
   * check the the "Initialize with a README" checkbox
 
-  ![reposettings](https://user-images.githubusercontent.com/1699186/221422541-be37a907-cda6-427e-986f-89089fe71147.png)
+  ![reposetting](https://user-images.githubusercontent.com/1699186/221436364-f0975ccd-2bd1-4805-947b-4a3a4e7a4c60.png)
 
   * use default settings for other options, hit create button
 
@@ -37,7 +37,7 @@ Once you have a repo in github, there are a number of things that come with the 
 * Make sure you are in the **code** tab
 * Hit the "Add file" drop down and choose "Create new file"
  
-  ![newfile](https://user-images.githubusercontent.com/1699186/221423775-c2c3d758-ba0d-4aea-b4f6-abb8ebb772da.png)
+  ![newfile](https://user-images.githubusercontent.com/1699186/221436580-f15ccfeb-7f28-48d8-8fbd-b2a5ab0d41e7.png)
 
 * give the file a name (suggestion: alphabet.txt)
 * Edit the file by adding the following to it:
@@ -54,9 +54,9 @@ This file is now known to git.  git is storing a version of this file
 * click link for the file you created in the last step 
 * hit the pencil icon in top right to edit the file
   1. insert the following line after "HIJK"
-```
-LMNOP
-```
+  ```
+  LMNOP
+  ```
   2. delete the line HIJK
 * then click commit changes button
 
@@ -86,6 +86,9 @@ HIJK
   * You do not have to keep this branch name...there isn't anything special about it
 * notice at the top left there is a dropdown with the word ```main``` in it.  This is the branch you are looking at.
 * more accurately it is the most recent commit within that particular branch
+
+### Make a new branch
+
 * To create a branch inside github click the dropdown and type a name for your new branch (suggest: alpha1)
 * You can click between the two branches by using the dropdown button
 * Make sure you are on your new branch (ie NOT main)
@@ -108,15 +111,16 @@ HIJK
 * Hit this button
 * Now, this button does not actually merge the files into main...it creates a pull request.  In otherwords it creates a request to ask if you want to merge it back together.
   * You can also make your own pull request even without that button, just go to pull request tab and hit new pull request
-  * Notice the two buttons at the top.  One is labelled base.  The other compare.
-  * Base is where you want the changes to go...which branch do you merge to
-  * Compare is the changes you want to pull into the Base ... which  branchdo the changes come from
+  * Notice the two buttons at the top.  One is labelled **base**.  The other **compare**.
+  * **Base** is where you want the changes to go...which branch do you merge to
+  * **Compare** is the changes you want to pull into the Base ... which  branchdo the changes come from
 * In the pull request tab, you will now see merge pull request button
 * Click this button to pull the changes in your second branch back to main
   * Confirm the merge
-  * DO NOT DELETE THE BRANCH
+  * **DO NOT DELETE THE BRANCH**
 
 ## Branching, merging, and conflicts
+
 * Be in the main branch
 * Create a third branch (suggest: alpha2)
 * In the **main** version commit (after the line ```QRS```:
@@ -133,11 +137,11 @@ to the last line
 WXY and Z
 ```
 * Now lets go to the pull request tab and start a new pull request
-* Use main as the base
-* for compare switch between your two branches.... you will notice that alpha1 is followed by green checkmark and the text ```able to merge```.  If you switch to alpha2 it is followed by red X and the text ```can't automatically merge```
+* Use **main** as the base
+* for compare switch between your two branches.... you will notice that **alpha1** is followed by green checkmark and the text ```able to merge```.  If you switch to **alpha2** it is followed by red X and the text ```can't automatically merge```
 * Essentially this is github saying that it knows how to put together main and alpha1.  It can figure this out on its own.  However not main and alpha2 that it needs help with.
-* Create a pull request to main from alpha1
-* Create a pull request to main from alpha2 (yes even though it can't be done automatically)
+* Create a pull request to main from **alpha1**
+* Create a pull request to main from **alpha2** (yes even though it can't be done automatically)
 * Lets merge in the easy one first, go to the pull request that can be automatically merged and merge it.
 * In the other pull request hit the ```Resolve conflict``` button
 * When you do this, you will open an editor that has what you wrote plus a number of conflict markers like the following:
