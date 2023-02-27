@@ -5,25 +5,10 @@ This activity introduces participants to working with remotes.  When we use git,
 ## What you will need:
 
 * A modern web browser
-* access to github codespace
-* git bash
+* access to github codespace (this is now standard)
 
 
 ## Cloning an Existing Repo
-
-Go to: https://github.com/catherine-leung/activity3-template
-
-This is a template repository.  You will create a copy of the template in your account by hitting the Use this template button
-
-Once you have created a repo from this template, spin up a codespace.
-
-A codespace a is a VM that runs through your browser.  All the commands you type in codespace are executed in the cloud. The great thing about code space is that you do not need to do any extra setup.  You will be able to get an editor and terminal.
-
-In the terminal type:
-
-```
-git remote -v
-```
 
 
 
