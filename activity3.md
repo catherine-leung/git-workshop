@@ -1,16 +1,31 @@
 
-git remotes link a local repository to a repository elsewhere (like github) through a uri.
+This activity introduces participants to working with remotes.  When we use git, we are rarely ever working entirely on our local machines or entirely on github.  Usually it is a mix of both.  This next activity will introduce you to working with remotes.
 
-We will now put the local git repository that you created in activity two and put it into a remote server
 
 ## What you will need:
 
-* A text editor.  You can use any plain text editor you want
-* A terminal where you can run git commands.
-    * On macs, terminal is just fine  
-    * On windows, you want git bash.  You can get this here: [https://git-scm.com/downloads](https://git-scm.com/downloads)
-* A github account
-* A local repository that you wish to put into github (like the one created by activity 2).  Note that the description applies to that particular repository.
+* A modern web browser
+* access to github codespace
+* git bash
+
+
+## Cloning an Existing Repo
+
+Go to: https://github.com/catherine-leung/activity3-template
+
+This is a template repository.  You will create a copy of the template in your account by hitting the Use this template button
+
+Once you have created a repo from this template, spin up a codespace.
+
+A codespace a is a VM that runs through your browser.  All the commands you type in codespace are executed in the cloud. The great thing about code space is that you do not need to do any extra setup.  You will be able to get an editor and terminal.
+
+In the terminal type:
+
+```
+git remote -v
+```
+
+
 
 ## Preparing a place to put repo in github
 
