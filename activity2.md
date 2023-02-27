@@ -171,7 +171,6 @@ nothing to commit, working tree clean
 * Use the command:
 ```git log --graph```
 
-
 ## Merge
 * In git you do not really have pull requests... you can pull code in, you can merge it... but the process is different
 * To merge what is in alpha1 into main
@@ -235,9 +234,12 @@ git merge alpha2
 * save file
 * add and commit
 
+## Push it all to github.
 
-
-
+To push all these changes into github:
+```
+git push origin
+```
 
 ## Summary
 
@@ -253,4 +255,5 @@ git commands:
 * git branch -v (list branches you have)
 * git checkout <branch name> (go into a branch)
 * git checkout <filename> (reverts your file to the version on the tip of branch you are sitting in)
+* git push <remote name> (pushes your local changes into a remote)
 
