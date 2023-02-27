@@ -1,33 +1,24 @@
-This activity will essentially look at how we did everything we did in activity 1 via the github interface using git commands locally.  When we write code we aren't going to do this inside the github editor... it doesn't suit our needs. Thus, it is essential that we understand how the same ideas we looked at (repo creation, commits, branch, merge etc.) can be applied to a repo we create locally.
+This activity will essentially look at how we did everything we did in activity 1 via the github interface using git commands locally.  When we write code we aren't going to put all our code in the github web editor. it doesn't suit our needs. Thus, it is essential that we understand how the same ideas we looked at (repo creation, commits, branch, merge etc.) can be applied to a repo we create locally.  This activity will take look at how the concepts from activity 1 applies to local repositories and also add onto it the idea of **remotes**.
 
 ## What you will need:
+
 * A text editor.  You can use any plain text editor you want
 * A terminal where you can run git commands.
-    * On macs, terminal is just fine  
+    * On macs, terminal is just fine if you have your command line tools.  You can check by typing the command:
+      ```git```
+      into the command line
     * On windows, you want git bash.  You can get this here: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+* a github account
 
-## Create a new git repo 
+## Create a new git repo locally
 
-* Make a folder (put it in a place you can easily cd into from the terminal)
-* Open the terminal and cd your way into that folder
+* Make a folder (put it in a place you can easily cd into from your terminal/commandline)
+* Open the terminal/gitbash and cd your way into that folder
 * Put the folder under revision control by using the command:
 ```git init```
 * Execute the command:
 ```ls -a```
 * Notice you now have a  **.git** hidden folder.  This folder is our repository... our data base. DO NOT modify the contents of your .git folder, ignore the fact that it is there
-* Type the command:
-```git status```
-and you should see:
-```
-On branch master
-
-Initial commit
-
-nothing to commit (create/copy files and use "git add" to track)
-```
-* So you see a few things...
-  * the branch you are looking at is master
-  * The repo has nothing (at Initial Commit)
 
 ## Commiting a new file
 * Using your text editor create a file containing
@@ -36,24 +27,7 @@ ABCDEFG
 HIJK
 QRS
 ```
-* save it into the folder you made
-* type the command:
-```git status```
-  * and you should see:
-```
-On branch master
-
-Initial commit
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	alphabet.txt
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-```
-* The above means that git is aware that you have an alphabet.txt file in your folder but that the file is not being tracked at all by the git database.
+* save it into the folder you made for your repo
 * To put into the database (ie into version control) you need to execute two commands:
 ```
 git add alphabet.txt
@@ -65,17 +39,34 @@ git commit -m "added 3 lines of the alphabet song"
   * since a commit can involve multiple files, we need to indicate all the files that were changed for one commit
   * think of add as a "packing" command.  You are packing up all the things you want for a commit into one.
   * Once you finish adding it all together, you then commit it.
-* Type the command:
-```git status```
-  * you should now see:
-```
-On branch master
-nothing to commit, working tree clean
-```
-* The above means that git now knows about ever file in the folder.  There aren't any changes in any file that git doesn't have a record of
  
+## Push into github
+
+This next step is not the same as activity 1. We will push this repository into github as a new repository.
+
+*  Go to github.com
+*  Use the + symbol to create a new repository
+
+![newrepo](https://user-images.githubusercontent.com/1699186/221596506-9a2b8014-6984-4219-b1ae-3276f8f9133f.png)
+
+*  Create a blank public or private repo but do not initialize with a readme.  Also, unless you have setup an ssh key (you will remember if you did..its rather lengthy process), make sure you are on the https settings
+*  
+![activity2reposetting](https://user-images.githubusercontent.com/1699186/221623049-354abf96-6498-427e-a0ee-3848bdbb5c2a.png)
+
+* When you are done, you should see a page that looks like the following.  Copy the 3 commands in the bottom block and paste it into the terminal/commandline and hit return to execute it.
+
+![emptyrepo](https://user-images.githubusercontent.com/1699186/221624716-64ca8bd7-51e5-4870-a72d-3807f939c0b9.png)
+
+
+* Refresh the browser page.
+* Look to see if you have same content as local
+
+
 
 ## Modify the file
+
+In your local computer
+
 * edit your file by
 * insert the following line after "HIJK"
 ```
@@ -86,7 +77,7 @@ LMNOP
 ```git status```
 you will see
 ```
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -103,7 +94,7 @@ git commit -m "added LMNOP, removed HIJK"
 ```
 * Again if you use ```git status``` you will see:
 ```
-On branch master
+On branch main
 nothing to commit, working tree clean
 ```
 
@@ -118,7 +109,7 @@ HIJK
 ```git status```
 you will see
 ```
-On branch master
+On branch main
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -135,7 +126,7 @@ git commit -m "added HIJK"
 ```
 * Again if you use ```git status``` you will see:
 ```
-On branch master
+On branch main
 nothing to commit, working tree clean
 ```
 
@@ -151,7 +142,7 @@ nothing to commit, working tree clean
 ```git status```
   * you should see:
 ```
-On branch master
+On branch main
 nothing to commit, working tree clean
 ```
 * To switch branches:
@@ -165,7 +156,7 @@ git checkout alpha1
 On branch alpha1
 nothing to commit, working tree clean
 ```
-* To switch back to master you would use ```git checkout master```
+* To switch back to main you would use ```git checkout main```
 * Switch into your alpha1 branch
 * Modify your file by adding:
 ```Now I know my ABC's``` to the bottom of the file
@@ -183,18 +174,18 @@ nothing to commit, working tree clean
 
 ## Merge
 * In git you do not really have pull requests... you can pull code in, you can merge it... but the process is different
-* To merge what is in alpha1 into master
-* Make sure you are sitting in master
-```git checkout master```
-* Merge alpha1 into master:
+* To merge what is in alpha1 into main
+* Make sure you are sitting in main
+```git checkout main```
+* Merge alpha1 into main:
 ```git merge alpha1```
 
 ## Branching, merging, and conflicts
-* Be in the master branch: ```git checkout master```
+* Be in the main branch: ```git checkout main```
 * Create a third branch (suggest: alpha2): ```git branch alpha2```
-* We should now have 3 branches (master, alpha1 and alpha2).  You can see if this is the case by using:
+* We should now have 3 branches (main, alpha1 and alpha2).  You can see if this is the case by using:
 ```git branch -v```
-* Go into master branch ``` git checkout master```
+* Go into main branch ``` git checkout main```
   * In the alphabet.txt add the following(after the line ```QRS```:
 ```
 TUV
@@ -228,14 +219,14 @@ to the last line
 ```git log --graph --all --decorate --topo-order --oneline```
 
 
-Now, if you will recall, on github we were able to easily merge alpha1 to master but not alpha2.  The same thing will happen here.
-* Lets start by merging alpha1 into master:
+Now, if you will recall, on github we were able to easily merge alpha1 to main but not alpha2.  The same thing will happen here.
+* Lets start by merging alpha1 into main:
 ```
-git checkout master
+git checkout main
 git merge alpha1
 ```
 * This should be no problem
-* Now lets try to merge alpha2 into master:
+* Now lets try to merge alpha2 into main:
 ```
 git merge alpha2
 ```
@@ -243,6 +234,8 @@ git merge alpha2
 * Using your text editor resolve your conflict in the same manner as you did on github
 * save file
 * add and commit
+
+
 
 
 
